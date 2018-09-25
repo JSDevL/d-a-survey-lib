@@ -121,6 +121,41 @@
           }
         }
       }
+    },
+    "survey": {
+      "root": "projects/survey",
+      "sourceRoot": "projects/survey/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/survey/tsconfig.lib.json",
+            "project": "projects/survey/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/survey/src/test.ts",
+            "tsConfig": "projects/survey/tsconfig.spec.json",
+            "karmaConfig": "projects/survey/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/survey/tsconfig.lib.json",
+              "projects/survey/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "d-a-survey-lib"

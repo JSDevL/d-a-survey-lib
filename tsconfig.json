@@ -16,6 +16,17 @@
     "lib": [
       "es2017",
       "dom"
-    ]
-  }
+    ],
+    "paths": {
+      "survey": [
+        "dist/survey"
+      ],
+      "survey/*": [
+        "dist/survey/*"
+      ]
+    }
+  },
+  "exclude": [
+    "wallabyTest.ts"
+  ]
 }
