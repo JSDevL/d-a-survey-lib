@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InitQuestionsAction should not affect state apply(falsy or !Question[]) 1`] = `undefined`;
+
+exports[`InitQuestionsAction should replace state if apply(Question[]) 1`] = `undefined`;

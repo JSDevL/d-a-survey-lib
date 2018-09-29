@@ -22,5 +22,12 @@ describe('TranslatePipe', () => {
 
   it('should return text string if translation is found', () => {
     expect(pipe.transform([new Translation('en', 'Hello')], 'en')).toEqual('Hello');
+
+    const t = new Translation('', '');
+
+    t.locale = 'de';
+    t.text = 'Hello_de';
+
+    expect(pipe.transform([new Translation('en', 'Hello'), t], 'de')).toEqual('Hello_de');
   });
 });

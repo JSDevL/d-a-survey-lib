@@ -3,6 +3,8 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {SurveyModule} from '../../projects/survey/src/lib/survey.module';
+import {StoreModule} from '@ngrx/store';
+import {EffectsModule} from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -10,6 +12,8 @@ import {SurveyModule} from '../../projects/survey/src/lib/survey.module';
   ],
   imports: [
     BrowserModule,
+    StoreModule.forRoot({}),
+    EffectsModule.forRoot([]),
     SurveyModule
   ],
   providers: [],
